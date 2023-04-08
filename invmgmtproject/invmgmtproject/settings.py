@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "dashboard.apps.DashboardConfig",
     "user.apps.UserConfig",
+    'crispy_forms',
+    "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -101,6 +103,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -129,3 +133,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = (BASE_DIR/"asert/")
+
+
+LOGIN_REDIRECT_URL = 'dashboard-index'
