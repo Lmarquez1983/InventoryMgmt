@@ -143,3 +143,13 @@ LOGIN_REDIRECT_URL = 'dashboard-index'
 
 
 LOGIN_URL = 'user-login'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# Used Gmail for test. But the Host need to be provided
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Default port for Google. Use the port of your email service
+EMAIL_HOST_USER = ''  # User Email
+EMAIL_HOST_PASSWORD = ''  # User Password
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
